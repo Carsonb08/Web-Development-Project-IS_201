@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joke Generator</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .joke-box {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 1.8rem;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #000;
+    }
+
+    .emoji-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .emoji-title span {
+      font-size: 1.6rem;
+    }
+
+    .emoji-title h1 {
+      font-size: 1.4rem;
+      margin: 0;
+      color: #000;
+    }
+
+    p#joke {
+      font-size: 1.2rem;
+      margin-bottom: 1.8rem;
+      color: #000;
+      font-weight: 500;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    button {
+      background-color: #38b2ac;
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #319795;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="joke-box">
+    <div class="emoji-title">
+      <span>😂</span>
+      <h1>Joke Generator</h1>
+      <span>😂</span>
+    </div>
+    <p id="joke">Click the button to get a laugh!</p>
+    <button onclick="tellJoke()">Tell me a joke</button>
+  </div>
+
+  <script>
+    const jokes = [
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Why don’t skeletons fight each other? They don’t have the guts.",
+      "What do you call fake spaghetti? An impasta!",
+      "Why did the bicycle fall over? Because it was two-tired!",
+      "How does a penguin build its house? Igloos it together.",
+      "I only know 25 letters of the alphabet. I don’t know y.",
+      "Why couldn’t the leopard play hide and seek? Because he was always spotted.",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet.",
+      "I'm reading a book on anti-gravity. It's impossible to put down!"
+    ];
+
+    function tellJoke() {
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      document.getElementById('joke').textContent = jokes[randomIndex];
+    }
+  </script>
+</body>
+</html>

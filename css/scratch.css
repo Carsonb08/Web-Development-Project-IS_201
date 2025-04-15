@@ -1,0 +1,29 @@
+
+.common{
+    text-align: center;
+    
+}
+.mainbody{
+    background-color: burlywood;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black
+    
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 1px;
+    right: 1px;
+    height: 35px;
+    padding-top: 15px;
+}
